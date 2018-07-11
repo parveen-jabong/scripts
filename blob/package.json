@@ -1,0 +1,14 @@
+{
+  "name": "blob",
+  "version": "1.0.0",
+  "description": "",
+  "main": "blobStorage.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "azure-storage": "^2.10.0"
+  }
+}
