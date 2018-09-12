@@ -9,6 +9,9 @@ const getContentType = (fileName = '') => {
     case '.css': {
         return 'text/css';
     }
+    case '.svg': {
+        return 'image/svg+xml'
+    }
     default: {
         return '';
     }

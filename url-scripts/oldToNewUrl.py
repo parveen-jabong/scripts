@@ -65,11 +65,11 @@ async def run(r):
         # with open('2000URLs', 'r', newline='', encoding='utf-8') as csvfile:
         #     reader = csvreader(csvfile, lineterminator='\n', delimiter=',', quotechar='"',
         #                        escapechar='\\', doublequote=False, quoting=QUOTE_NONE, strict=True)
-        reader = pandas.read_excel('./URL.xlsx')
-        rows = reader['URL']
-        fetcher = len(rows) / 1000
-        while i <= fetcher:
-        for row in reader['URL']:
+        reader = pandas.read_csv('./SeoData(4473).csv')
+        #rows = reader['Old URL']
+        #fetcher = len(rows) / 1000
+        #while i <= fetcher:
+        for row in reader['Old URL']:
             dataappend(row)
             #queryparams = (quote(i) for i in row)
             urlAppendStr = row.replace(baseUrl, '')

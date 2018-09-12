@@ -5,5 +5,5 @@ node blobStorage ./assets/<folder> key container
 
 ```js
     Example:
-    node blobStorage.js ./assets/js Moc5FT31RKywxLUhtZq2es4HkYgRIuNuOLwkpA047qr73ivO4uKbDZV1CV7uQI4P003IJhPvhMcrN+PZkCZDRQ== web-assets
+    node blobStorage.js ./assets/images Moc5FT31RKywxLUhtZq2es4HkYgRIuNuOLwkpA047qr73ivO4uKbDZV1CV7uQI4P003IJhPvhMcrN+PZkCZDRQ== live
 ```

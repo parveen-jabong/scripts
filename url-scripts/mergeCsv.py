@@ -2,12 +2,11 @@ import pandas
 from csv import writer as csvwriter
 from csv import QUOTE_NONE
 
-OldUrlToNewUrl = pandas.read_csv('./OldUrlToNewUrl.csv')
 OldUrlCounts = pandas.read_csv('./OldUrlCounts.csv')
 NewUrlCounts = pandas.read_csv('./NewUrlCounts.csv')
 
-oldUrls = OldUrlToNewUrl['old_urls']
-newUrls = OldUrlToNewUrl['new_urls']
+oldUrls = OldUrlCounts['old_urls']
+newUrls = NewUrlCounts['new_urls']
 oldUrlCount = OldUrlCounts['count']
 newUrlCount = NewUrlCounts['count']
 

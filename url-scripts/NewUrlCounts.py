@@ -12,7 +12,7 @@ from aiohttp import TCPConnector
 from math import ceil
 
 # count of request to fetch in one go
-counter = 500
+counter = 200
 
 async def fetch(url, session):
     print(url)
@@ -39,8 +39,8 @@ async def run(r):
     async with ClientSession(connector=connector,headers=headers) as session:
         data = list()
         dataappend = data.append
-        reader = pandas.read_csv('./OldUrlToNewUrl.csv')
-        rows = reader['new_urls']
+        reader = pandas.read_csv('./Top_Search_ga.csv')
+        rows = reader['Event Label']
         length = len(rows)
         fetcher = ceil(length / counter)
         i = 0
@@ -52,6 +52,7 @@ async def run(r):
                 row = rows[i*counter + j]
                 dataappend(row)
                 updatedKey = row.replace('https://www.jabong.com/', '')
+                updatedKey = row.replace(' ', '-')
                 task = asyncio.ensure_future(
                     fetch(url + updatedKey + '?o=0&rows=52', session))
                 tasks.append(task)
@@ -70,7 +71,7 @@ async def run(r):
                             a = True
                         writer.writerow([x, jsonStr["totalCount"]])
                     except:
-                        writer.writerow([x, "failed"])
+                        writer.writerow([x, responses[index]])
                     index += 1
             i += 1
 
