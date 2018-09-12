@@ -3,6 +3,9 @@ Blob Storage Script to compress and push the compressed files with content encod
 
 node blobStorage ./assets/<folder> key container
 
+If one needs to push images in `/live/images` on azure, then copy the images in `./assets/images` folder.
+If one needs to push images in `/live/images/pwa` on azure, then copy the images in `./assets/images/pwa` folder.
+
 ```js
     Example:
     node blobStorage.js ./assets/images Moc5FT31RKywxLUhtZq2es4HkYgRIuNuOLwkpA047qr73ivO4uKbDZV1CV7uQI4P003IJhPvhMcrN+PZkCZDRQ== live
