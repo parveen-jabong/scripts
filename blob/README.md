@@ -8,5 +8,5 @@ If one needs to push images in `/live/images/pwa` on azure, then copy the images
 
 ```js
     Example:
-    node blobStorage.js ./assets/images Moc5FT31RKywxLUhtZq2es4HkYgRIuNuOLwkpA047qr73ivO4uKbDZV1CV7uQI4P003IJhPvhMcrN+PZkCZDRQ== live
+    node blobStorage.js ./assets/images <key> live
 ```
